@@ -113,6 +113,42 @@ object ScalaCollectionOperations extends App{
 
   //If they key is not found Scala throws an exception
 
+  //A better way to retrieve an element from a Map is to use the get method which returns a Option Object
+  //An Option type wraps a value into an object that can either return the type None if the value is null or
+  //Some Object
+
+  val mayNotBeADefinition = updatedDictionary.get("Java") //Returns an Option Object
+  println()
+  println("Option is equal to None")
+  println(mayNotBeADefinition)
+
+  val iThinkThisContainsSomeDefinition = updatedDictionary.get("Python")
+  println()
+  println("Option is equal to Some(value)")
+  println(iThinkThisContainsSomeDefinition)
+
+  //This allows us to use pattern matching which can be used to handle two different cases
+
+  val result = mayNotBeADefinition match {
+    case None => "There was no definition"
+    case Some(value) => "Definition is: " + value
+  }
+
+
+  //Now I can easily search my entire Map while getting no errors what so ever.
+  //So this is using lambda expression + pattern matching + Options(To avoid actually handling exceptions)
+  val searchDictionary = (word:String) => {
+    updatedDictionary.get(word) match {
+      case None => "There was no definition for " + word
+      case Some(value) => word + ": " + value
+    }
+  }
+
+  println(searchDictionary("Ronald"))
+
+  println(searchDictionary("CSS3"))
+
+
 
 
 
