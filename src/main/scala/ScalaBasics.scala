@@ -19,4 +19,9 @@ object ScalaBasics extends App{
   //This means operators in Scala are really method calls
   //The below expression is equivalent to 2.+(3)
   var integer = 2 + 3
+
+
+  //Scala is statically typed and also contains type inference.
+  //A language is statically-typed if the type of a variable is known at compile-time instead of at run-time.
+
 }
