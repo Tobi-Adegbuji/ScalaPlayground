@@ -144,8 +144,10 @@ object ScalaCollectionOperations extends App{
     }
   }
 
+  println()
   println(searchDictionary("Ronald"))
-
+  
+  println()
   println(searchDictionary("CSS3"))
 
 
