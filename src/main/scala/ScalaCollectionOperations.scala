@@ -91,5 +91,29 @@ object ScalaCollectionOperations extends App{
   println(canDrink ::: cannotDrink)
 
 
+  //Lets create a map
+  val dictionary = Map(
+    "Developer" -> "Someone who looks at a computer all day.",
+    "CSS3" -> "A real programming language",
+    "Python" -> "A crappy Scala.. jk"
+  )
+
+  // The "Word'-> "Definition" is equivalent to creating a Tuple2[String,String] object
+  //Here is the proof
+  println()
+  println("Tuple2 Proof")
+  println("Age" -> 21)
+
+
+  //Lets add an element to the map and then retrieve it.
+  val updatedDictionary = dictionary + ("Cheese" -> "Stacks of money")
+  println()
+  println("Adding and Retrieving from Map")
+  println("Cheese means: "+  updatedDictionary("Cheese"))
+
+  //If they key is not found Scala throws an exception
+
+
+
 
 }
