@@ -45,25 +45,28 @@ object Functions extends App {
 
   def greet(age: Int, name: String): String = s"Hi, my name is $name and I am $age years old."
 
-  def factorial(n: Int): Int = {
-    if (n == 0) return 1
-    if (n > 0) n * factorial(n - 1)
+  def factorial(n: Int): Int =
+    if (n <= 0) 1
     else n * factorial(n + 1)
-  }
 
-
-  //5 <-- 4 + 3//
-  def fib(n:Int): Int = {
-    if(n <= 2) 1
+  def fib(n:Int): Int =
+    if(n < 2) n
     else fib(n-1) + fib(n-2)
-  }
 
+  println(s"Fib: ${fib(3)}")
+
+
+  //Solving isPrime recursively
   def isPrime(n: Int): Boolean = {
-    if(n % 7 != 0 || n % 5 != 0 || n % 3 != 0 || n % 2 != 0 ) true
-    else false
+    def isPrimeUntil(t: Int): Boolean =
+      if(t <= 1 ) true
+      else n % t != 0 && isPrimeUntil(t-1)
+
+    isPrimeUntil(n / 2)
+
   }
 
-  println(isPrime(5))
+  println(isPrime(21))
 
   //Left off 18:35 FUNCTONS
 
