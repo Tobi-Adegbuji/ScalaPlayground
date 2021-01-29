@@ -21,6 +21,9 @@ object ValuesVariablesTypes extends App {
 
   //VAR IS MUTABLE
   var aVariable = 4
-  aVariable = aVariable + 1 //Vars are used in FP as side effects. They allow us to see what our programs are dong.
+  aVariable = aVariable + 1
+  //Vars are used in FP as side effects. They allow us to see what our programs are doing.
+  //A side effect is any application state change that is observable outside the called function other than its return value.
+
 
 }
