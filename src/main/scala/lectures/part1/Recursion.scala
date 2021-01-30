@@ -52,12 +52,33 @@ WHEN YOU NEED LOOPS, USE TAIL RECURSION
   //3 Fib tail recursive
 
   @tailrec
-  def concatenateString(n: Int, aString: String, accumulator: String): String = {
+  def concatenateString(n: Int, aString: String, accumulator: String): String =
     if (n <= 0) accumulator
     else concatenateString(n - 1, aString, accumulator + aString)
-  }
-
 
   println(concatenateString(3, "Hello", "3 times: "))
+
+
+  def isPrime(n: Int): Boolean = {
+    @tailrec
+    def isPrimeTailRec(t: Int, isStillPrime: Boolean): Boolean =
+      if (!isStillPrime) false
+      else if (t <= 1) true
+      else isPrimeTailRec(t - 1, n % t != 0 && isStillPrime)
+      isPrimeTailRec(n/2,true)
+  }
+
+  println(isPrime(23))
+
+  def reverseAString(aString: String): String = {
+    @tailrec
+    def reverseHelper(i: Int, acc: String): String =
+      if(i <= -1) acc
+      else reverseHelper(i - 1, acc + aString.charAt(i))
+      reverseHelper(aString.length - 1, "")
+  }
+
+  println(reverseAString("Hello"))
+
 
 }
