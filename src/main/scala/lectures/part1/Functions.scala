@@ -57,6 +57,7 @@ object Functions extends App {
 
 
   //Solving isPrime recursively
+  //Awesome use of function within a function
   def isPrime(n: Int): Boolean = {
     def isPrimeUntil(t: Int): Boolean =
       if(t <= 1 ) true
