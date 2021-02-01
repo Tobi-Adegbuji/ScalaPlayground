@@ -47,7 +47,4 @@ object Objects extends App {
 
   //Scala Applications = Scala object with: def main(args; Array[String]): Unit
   //So when we extend App it contains the main method to run
-
-
-
 }

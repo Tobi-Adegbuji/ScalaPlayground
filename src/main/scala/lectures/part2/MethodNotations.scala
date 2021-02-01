@@ -13,7 +13,7 @@ object MethodNotations extends App{
     def apply(): String = s"Hi, my name is $name and I like $favoriteMovie"
     def apply(viewNum: Int): String = s"$name watched $favoriteMovie $viewNum times."
     def unary_+ : Person = new Person(name, favoriteMovie, (age + 1))
-    def learns(topic: String): String = s"$name learns $topic"
+    def learns(topic: String): String = s"$name learns $topic and likes to study it 24/7"
     def learnsJava : String = this learns "Java"
   }
 
