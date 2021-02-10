@@ -1,6 +1,6 @@
 package lectures.part2
 
-object InheritanceAndTraits extends App {
+object Inheritance extends App {
 
   //Scala has single class inheritance
   //Using sealed to only allow cat class to extend Animal
@@ -11,6 +11,7 @@ object InheritanceAndTraits extends App {
     private def run = println("I am running!")
     protected def jump = println("I am jumping!")
   }
+
   //Subclass
   //Overriding in the constructor
   class Cat(override val creatureType: String = "Domestic") extends Animal{
